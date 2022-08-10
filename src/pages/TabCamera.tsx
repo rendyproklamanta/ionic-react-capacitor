@@ -35,7 +35,7 @@ const TabCamera: React.FC = () => {
          </IonHeader>
          <IonContent fullscreen>
             <IonButton expand="full" onClick={takePicture} >Take Picture</IonButton>
-            <img src={camImg} alt="image-placeholder"/>
+            <img src={camImg} alt="camera-placeholder"/>
          </IonContent>
       </IonPage>
    );
