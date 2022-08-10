@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Camera as CapCamera, CameraResultType } from '@capacitor/camera';
 
 const TabCamera: React.FC = () => {
-   const [placeImg, setPlaceImg] = useState<any | null>(null);
+   const [camImg, setCamImg] = useState<any | null>(null);
 
    const takePicture = async () => {
       try {
@@ -19,7 +19,7 @@ const TabCamera: React.FC = () => {
          // if desired (or pass resultType: CameraResultType.Base64 to getPhoto)
          var imageUrl = image.webPath;
          console.log(imageUrl);
-         setPlaceImg(imageUrl);
+         setCamImg(imageUrl);
 
       } catch (error) {
          console.log(error);
@@ -35,7 +35,7 @@ const TabCamera: React.FC = () => {
          </IonHeader>
          <IonContent fullscreen>
             <IonButton expand="full" onClick={takePicture} >Take Picture</IonButton>
-            <img src={placeImg} />
+            <img src={camImg} alt="image-placeholder"/>
          </IonContent>
       </IonPage>
    );
